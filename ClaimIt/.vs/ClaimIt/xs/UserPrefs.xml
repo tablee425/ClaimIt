@@ -1,15 +1,26 @@
-﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{E82453F4-8DC6-4174-AF04-C95CAD15F975}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt.Android/Resources/drawable/splash_screen.xml">
     <Files>
+      <File FileName="ClaimIt.Android/SplashActivity.cs" Line="41" Column="2" />
+      <File FileName="ClaimIt.Android/Resources/drawable/splash_screen.xml" Line="10" Column="24" />
+      <File FileName="ClaimIt.Android/Properties/AndroidManifest.xml" Line="5" Column="12" />
+      <File FileName="ClaimIt.Android/Resources/values/styles.xml" Line="30" Column="3" />
+      <File FileName="ClaimIt.Android/MainActivity.cs" Line="23" Column="2" />
+      <File FileName="ClaimIt.Android/Resources/values/colors.xml" Line="7" Column="42" />
+      <File FileName="ClaimIt.Android/Resources/values/strings.xml" Line="4" Column="54" />
+      <File FileName="ClaimIt.Android/Properties/AssemblyInfo.cs" Line="16" Column="32" />
+      <File FileName=":Volumes:MacData:Works:Xamarin:Test:Source:ClaimIt:ClaimIt:ClaimIt.Android:Main2Activity.cs" Line="16" Column="6" />
+      <File FileName="ClaimIt/MainPage.xaml" Line="3" Column="16" />
+      <File FileName="ClaimIt/MainPage.xaml.cs" Line="13" Column="6" />
       <File FileName="ClaimIt/App.xaml" Line="5" Column="15" />
-      <File FileName="ClaimIt.iOS/Resources/LaunchScreen.storyboard" />
-      <File FileName="ClaimIt.iOS/Info.plist" />
+      <File FileName="ClaimIt/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="ClaimIt.Android/Resources/Resource.designer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ClaimIt.Android PreferredExecutionTarget="Android.Android_Accelerated_Pie" />
+  <MonoDevelop.Ide.ItemProperties.ClaimIt.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0715f7e404453138" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ClaimIt.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.913FCC19-8E08-4B9C-8CFE-3C9DBA9BFD54" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.ItemProperties.ClaimIt.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C27C890C-6FF8-4325-A43B-47DBE1CBECC2" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
