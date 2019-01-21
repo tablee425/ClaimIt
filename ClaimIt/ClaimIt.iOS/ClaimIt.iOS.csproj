@@ -140,6 +140,8 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SplashImage.launchimage\splash-iphone-x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -156,5 +158,13 @@
       <Project>{5CDA71CE-1EB0-4FD9-A2B6-5456A81D6814}</Project>
       <Name>ClaimIt</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\SplashImage.launchimage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Assets.xcassets\SplashImage.launchimage\splash-iphone-x.png">
+      <Link>Resources\splash-iphone-x.png</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>

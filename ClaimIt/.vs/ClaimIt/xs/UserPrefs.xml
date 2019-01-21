@@ -1,16 +1,15 @@
-﻿<Properties StartupConfiguration="{E82453F4-8DC6-4174-AF04-C95CAD15F975}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../.gitignore">
+﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="ClaimIt/MainPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="ClaimIt/MainPage.xaml" Line="7" Column="15" />
-      <File FileName="../.gitignore" Line="1" Column="9" />
+      <File FileName="ClaimIt/App.xaml" Line="5" Column="15" />
+      <File FileName="ClaimIt.iOS/Resources/LaunchScreen.storyboard" />
+      <File FileName="ClaimIt.iOS/Info.plist" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ClaimIt FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.ClaimIt.Android FirstBuild="True" PreferredExecutionTarget="Android.Android_Accelerated_Pie" />
+  <MonoDevelop.Ide.ItemProperties.ClaimIt.Android PreferredExecutionTarget="Android.Android_Accelerated_Pie" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ClaimIt.iOS FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.ClaimIt.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.913FCC19-8E08-4B9C-8CFE-3C9DBA9BFD54" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
