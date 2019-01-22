@@ -168,5 +168,6 @@
     <BundleResource Include="Resources\BottomNav.png" />
     <BundleResource Include="Resources\TryAgain.png" />
     <BundleResource Include="Resources\splash-iphone-x.png" />
+    <BundleResource Include="Resources\EnterPassword.png" />
   </ItemGroup>
 </Project>

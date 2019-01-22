@@ -27,6 +27,7 @@ namespace ClaimIt
       var contentPasswordStep = new ContentEnterPasswordStep();
       DynamicPageView.Children.Clear();
       DynamicPageView.Children.Add(contentPasswordStep);
+      contentPasswordStep.EnterPasswordEvent += ContentEnterPasswordEvent;
     }
 
     private void addContentPasswordFailStepPage()
@@ -53,6 +54,11 @@ namespace ClaimIt
     }
 
     private void ContentTryAgainEvent()
+    {
+      addContentVerifyStepPage();
+    }
+
+    private void ContentEnterPasswordEvent()
     {
       addContentVerifyStepPage();
     }

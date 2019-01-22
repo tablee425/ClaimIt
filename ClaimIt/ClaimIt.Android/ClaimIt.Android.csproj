@@ -93,6 +93,7 @@
     <AndroidResource Include="Resources\drawable\Wrong.png" />
     <AndroidResource Include="Resources\drawable\BottomNav.png" />
     <AndroidResource Include="Resources\drawable\TryAgain.png" />
+    <AndroidResource Include="Resources\drawable\EnterPassword.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
