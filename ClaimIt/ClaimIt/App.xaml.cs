@@ -11,7 +11,7 @@ namespace ClaimIt
     {
       InitializeComponent();
 
-      MainPage = new MainPage();
+      MainPage = new VerificationPage();
     }
 
     protected override void OnStart()

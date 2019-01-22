@@ -140,8 +140,6 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\SplashImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\SplashImage.launchimage\splash-iphone-x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -163,8 +161,7 @@
     <Folder Include="Assets.xcassets\SplashImage.launchimage\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Assets.xcassets\SplashImage.launchimage\splash-iphone-x.png">
-      <Link>Resources\splash-iphone-x.png</Link>
-    </BundleResource>
+    <BundleResource Include="Resources\TopBg.png" />
+    <BundleResource Include="Resources\Logo.png" />
   </ItemGroup>
 </Project>

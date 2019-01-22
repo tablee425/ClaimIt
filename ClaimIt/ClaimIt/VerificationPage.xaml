@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:ClaimIt"
+  x:Class="ClaimIt.VerificationPage"
+  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true"
+>
+  <RelativeLayout>
+    <FlexLayout Direction="Column">
+      <RelativeLayout>
+        <Image
+          x:Name="bgImg"
+          Source="TopBg.png"
+          Aspect="AspectFill"
+        />
+        <Image
+          x:Name="logoImg"
+          Source="Logo.png"
+          Aspect="AspectFill"
+          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Width, Factor=.7}"
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Height, Factor=.6}"
+          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Width, Factor=.15}"
+          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Height, Factor=.2}"
+        />
+      </RelativeLayout>
+      <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="DynamicPageView"></StackLayout>
+    </FlexLayout>
+    <FlexLayout AlignItems="Center" JustifyContent="Center" x:Name="activityIndicatorLayout">
+      <ActivityIndicator x:Name="activityIndicator" IsRunning="true" VerticalOptions="Center"></ActivityIndicator>
+    </FlexLayout>
+  </RelativeLayout>
+</ContentPage>

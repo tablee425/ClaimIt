@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ClaimIt.ContentVerifyStep">
+  <ContentView.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Entry">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="MaxLength" Value="1" />
+        <Setter Property="Keyboard" Value="Numeric" />
+        <Setter Property="Margin" Value="2, 0, 2, 0" />
+        <Setter Property="TextColor" Value="Green" />
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+    </ResourceDictionary>
+  </ContentView.Resources>
+  <StackLayout HorizontalOptions="Center">
+    <Label Font="16" HorizontalTextAlignment="Center" TextColor="#333" Text="PLEASE ENTER YOUR PARTICIPANT ID" Margin="0, 30, 0, 0"></Label>
+    <FlexLayout JustifyContent="Center" AlignItems="Center" Direction="Row" Margin="0, 20, 0, 0">
+      <Entry x:Name="num1" TextChanged="Num1Changed"></Entry>
+      <Entry x:Name="num2" TextChanged="Num2Changed"></Entry>
+      <Entry x:Name="num3" TextChanged="Num3Changed"></Entry>
+      
+      <Label Text="-" Margin="2, 0, 2, 0"></Label>
+
+      <Entry x:Name="num4" TextChanged="Num4Changed"></Entry>
+      <Entry x:Name="num5" TextChanged="Num5Changed"></Entry>
+      <Entry x:Name="num6" TextChanged="Num6Changed"></Entry>
+
+      <Label Text="-" Margin="2, 0, 2, 0"></Label>
+
+      <Entry x:Name="num7" TextChanged="Num7Changed"></Entry>
+      <Entry x:Name="num8" TextChanged="Num8Changed"></Entry>
+      <Entry x:Name="num9" TextChanged="Num9Changed"></Entry>
+      <Entry x:Name="num10" TextChanged="Num10Changed"></Entry>
+    </FlexLayout>
+  </StackLayout>
+  
+</ContentView>
