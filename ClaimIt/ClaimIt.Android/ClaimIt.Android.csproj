@@ -89,6 +89,10 @@
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\drawable\TopBg.png" />
     <AndroidResource Include="Resources\drawable\Logo.png" />
+    <AndroidResource Include="Resources\drawable\Check.png" />
+    <AndroidResource Include="Resources\drawable\Wrong.png" />
+    <AndroidResource Include="Resources\drawable\BottomNav.png" />
+    <AndroidResource Include="Resources\drawable\TryAgain.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

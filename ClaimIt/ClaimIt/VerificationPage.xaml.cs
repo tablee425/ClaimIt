@@ -16,6 +16,7 @@ namespace ClaimIt
     private void addContentVerifyStepPage()
     {
       var contentVerifyStep = new ContentVerifyStep();
+      DynamicPageView.Children.Clear();
       DynamicPageView.Children.Add(contentVerifyStep);
       contentVerifyStep.VerifyEvent += ContentVerifyStepEvent;
       activityIndicatorLayout.IsVisible = false;
@@ -28,12 +29,33 @@ namespace ClaimIt
       DynamicPageView.Children.Add(contentPasswordStep);
     }
 
-    async private void ContentVerifyStepEvent()
+    private void addContentPasswordFailStepPage()
+    {
+      var contentPasswordFailStep = new ContentPasswordFailStep();
+      DynamicPageView.Children.Clear();
+      contentPasswordFailStep.TryAgainEvent += ContentTryAgainEvent;
+      DynamicPageView.Children.Add(contentPasswordFailStep);
+    }
+
+    async private void ContentVerifyStepEvent(string code)
     {
       activityIndicatorLayout.IsVisible = true;
       await Task.Delay(3000);
       activityIndicatorLayout.IsVisible = false;
-      addContentPasswordStepPage();
+      if (code == "0000000000") // This is only for test 
+      {
+        addContentPasswordStepPage();
+      }
+      else
+      {
+        addContentPasswordFailStepPage();
+      }
     }
+
+    private void ContentTryAgainEvent()
+    {
+      addContentVerifyStepPage();
+    }
+
   }
 }

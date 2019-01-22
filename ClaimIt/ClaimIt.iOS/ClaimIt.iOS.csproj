@@ -163,5 +163,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\TopBg.png" />
     <BundleResource Include="Resources\Logo.png" />
+    <BundleResource Include="Resources\Check.png" />
+    <BundleResource Include="Resources\Wrong.png" />
+    <BundleResource Include="Resources\BottomNav.png" />
+    <BundleResource Include="Resources\TryAgain.png" />
+    <BundleResource Include="Resources\splash-iphone-x.png" />
   </ItemGroup>
 </Project>
