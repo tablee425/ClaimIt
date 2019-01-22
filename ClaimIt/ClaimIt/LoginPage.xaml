@@ -2,11 +2,11 @@
 <ContentPage
   xmlns="http://xamarin.com/schemas/2014/forms"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="ClaimIt.LoginPage"
   xmlns:local="clr-namespace:ClaimIt"
-  x:Class="ClaimIt.VerificationPage"
   xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
   ios:Page.UseSafeArea="true"
-  Title="Verification Page"
+  Title="Login Page"
   NavigationPage.HasNavigationBar="false"
 >
   <RelativeLayout>
@@ -29,24 +29,6 @@
           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Height, Factor=.2}"
         />
       </RelativeLayout>
-      <StackLayout FlexLayout.Grow="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="DynamicPageView" />
-      <RelativeLayout>
-        <Image Source="BottomNav.png" x:Name="bottomNavImg" />
-        <Label
-          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bottomNavImg, Property=Width, Factor=1}"
-          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bottomNavImg, Property=Height, Factor=1}"
-          Text="Need Help? Tap here to talk to a trial coordinator"
-          HorizontalTextAlignment="Center"
-          VerticalTextAlignment="Center"
-          FontSize="15"
-          TextColor="#333"
-          MaxLines="2"
-          Margin="80, 0, 80, 0"
-        />
-      </RelativeLayout>
-    </FlexLayout>
-    <FlexLayout AlignItems="Center" JustifyContent="Center" x:Name="activityIndicatorLayout">
-      <ActivityIndicator x:Name="activityIndicator" IsRunning="true" VerticalOptions="Center"></ActivityIndicator>
     </FlexLayout>
   </RelativeLayout>
 </ContentPage>

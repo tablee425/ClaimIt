@@ -1,26 +1,30 @@
 ﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/ContentPasswordFailStep.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/IDInfo.cs">
     <Files>
-      <File FileName="ClaimIt/VerificationPage.xaml.cs" Line="13" Column="34" />
-      <File FileName="ClaimIt/ContentVerifyStep.xaml" Line="38" Column="15" />
-      <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="14" Column="30" />
-      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml" Line="8" Column="15" />
-      <File FileName="ClaimIt/VerificationPage.xaml" Line="36" Column="43" />
+      <File FileName="ClaimIt/VerificationPage.xaml.cs" Line="69" Column="22" />
+      <File FileName="ClaimIt/ContentVerifyStep.xaml" Line="27" Column="62" />
+      <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="21" Column="1" />
+      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml" Line="16" Column="1" />
+      <File FileName="ClaimIt/VerificationPage.xaml" Line="9" Column="1" />
       <File FileName="ClaimIt/App.xaml" Line="3" Column="26" />
-      <File FileName="ClaimIt/ContentVerifyStep.xaml.cs" Line="15" Column="1" />
-      <File FileName="ClaimIt/ContentPasswordFailStep.xaml.cs" Line="4" Column="1" />
-      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml.cs" Line="5" Column="18" />
+      <File FileName="ClaimIt/ContentVerifyStep.xaml.cs" Line="132" Column="30" />
+      <File FileName="ClaimIt/ContentPasswordFailStep.xaml.cs" Line="13" Column="6" />
+      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml.cs" Line="12" Column="6" />
       <File FileName="ClaimIt/ImageResourceExtension.cs" Line="14" Column="26" />
       <File FileName="ClaimIt.iOS/Resources/LaunchScreen.storyboard" />
       <File FileName="ClaimIt.iOS/Info.plist" />
       <File FileName="ClaimIt.iOS/Main.cs" Line="21" Column="1" />
       <File FileName="ClaimIt.Android/SplashActivity.cs" Line="36" Column="17" />
+      <File FileName="ClaimIt/App.xaml.cs" Line="14" Column="60" />
+      <File FileName="ClaimIt/LoginPage.xaml" Line="11" Column="3" />
+      <File FileName="ClaimIt/LoginPage.xaml.cs" Line="11" Column="6" />
+      <File FileName="ClaimIt/IDInfo.cs" Line="2" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ClaimIt.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0715f7e404453138" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.ItemProperties.ClaimIt.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C27C890C-6FF8-4325-A43B-47DBE1CBECC2" />
+  <MonoDevelop.Ide.ItemProperties.ClaimIt.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.519C2505-6FF4-42B0-B96C-F2DD47D670A2" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

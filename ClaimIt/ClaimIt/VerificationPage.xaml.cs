@@ -7,6 +7,7 @@ namespace ClaimIt
 {
   public partial class VerificationPage : ContentPage
   {
+    public string verifiedCode = "";
     public VerificationPage()
     {
       InitializeComponent();
@@ -27,7 +28,7 @@ namespace ClaimIt
       var contentPasswordStep = new ContentEnterPasswordStep();
       DynamicPageView.Children.Clear();
       DynamicPageView.Children.Add(contentPasswordStep);
-      contentPasswordStep.EnterPasswordEvent += ContentEnterPasswordEvent;
+      contentPasswordStep.EnterPasswordEvent += async delegate { await ContentEnterPasswordEventAsync(); };
     }
 
     private void addContentPasswordFailStepPage()
@@ -43,6 +44,7 @@ namespace ClaimIt
       activityIndicatorLayout.IsVisible = true;
       await Task.Delay(3000);
       activityIndicatorLayout.IsVisible = false;
+      verifiedCode = code;
       if (code == "0000000000") // This is only for test 
       {
         addContentPasswordStepPage();
@@ -58,10 +60,16 @@ namespace ClaimIt
       addContentVerifyStepPage();
     }
 
-    private void ContentEnterPasswordEvent()
+    private async Task ContentEnterPasswordEventAsync()
     {
-      addContentVerifyStepPage();
+      var info = new IDInfo
+      {
+        ID = verifiedCode,
+        IDType = 1
+      };
+      var loginPage = new LoginPage();
+      loginPage.BindingContext = info;
+      await Navigation.PushAsync(loginPage);
     }
-
   }
 }
