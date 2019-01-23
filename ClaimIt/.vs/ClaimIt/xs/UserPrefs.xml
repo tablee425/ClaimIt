@@ -1,19 +1,12 @@
-﻿<Properties StartupConfiguration="{E82453F4-8DC6-4174-AF04-C95CAD15F975}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt.Android/MyEntryRenderer.cs">
+﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/DashboardPage.xaml.cs">
     <Files>
-      <File FileName="ClaimIt/LoginPage.xaml" Line="113" Column="92" />
-      <File FileName="ClaimIt/MyEntry.cs" Line="6" Column="29" />
-      <File FileName="ClaimIt.iOS/MyEntryRenderer.cs" Line="22" Column="9" />
+      <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="13" Column="7" />
+      <File FileName="ClaimIt/DashboardPage.xaml" Line="7" Column="1" />
       <File FileName="ClaimIt/LoginPage.xaml.cs" Line="29" Column="1" />
-      <File FileName="ClaimIt/VerificationPage.xaml.cs" Line="46" Column="49" />
-      <File FileName="ClaimIt/VerificationPage.xaml" Line="50" Column="18" />
-      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml" Line="16" Column="1" />
-      <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="17" Column="9" />
-      <File FileName="ClaimIt/DashboardPage.xaml" Line="6" Column="1" />
-      <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="13" Column="6" />
-      <File FileName="ClaimIt/ContentPasswordFailStep.xaml.cs" Line="23" Column="6" />
-      <File FileName="ClaimIt.Android/SplashActivity.cs" Line="1" Column="1" />
-      <File FileName="ClaimIt.Android/MyEntryRenderer.cs" Line="12" Column="60" />
+      <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="21" Column="1" />
+      <File FileName="ClaimIt/VerificationPage.xaml" Line="24" Column="28" />
+      <File FileName="ClaimIt/LoginPage.xaml" Line="26" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ClaimIt.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0715f7e404453138" />

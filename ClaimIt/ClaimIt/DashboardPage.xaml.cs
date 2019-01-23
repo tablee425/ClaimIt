@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace ClaimIt
@@ -10,6 +10,8 @@ namespace ClaimIt
     public DashboardPage()
     {
       InitializeComponent();
+
+      Title = "CarouselView";
     }
   }
 }
