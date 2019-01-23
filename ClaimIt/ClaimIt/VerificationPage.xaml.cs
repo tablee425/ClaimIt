@@ -42,7 +42,7 @@ namespace ClaimIt
     async private void ContentVerifyStepEvent(string code)
     {
       activityIndicatorLayout.IsVisible = true;
-      await Task.Delay(3000);
+      await Task.Delay(1000);
       activityIndicatorLayout.IsVisible = false;
       verifiedCode = code;
       if (code == "0000000000") // This is only for test 

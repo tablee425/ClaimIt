@@ -60,6 +60,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
+    <Compile Include="MyEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -94,6 +95,10 @@
     <AndroidResource Include="Resources\drawable\BottomNav.png" />
     <AndroidResource Include="Resources\drawable\TryAgain.png" />
     <AndroidResource Include="Resources\drawable\EnterPassword.png" />
+    <AndroidResource Include="Resources\drawable\LoginLogo.png" />
+    <AndroidResource Include="Resources\drawable\LoginIDBar.png" />
+    <AndroidResource Include="Resources\drawable\LockIcon.png" />
+    <AndroidResource Include="Resources\drawable\LoginBtn.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

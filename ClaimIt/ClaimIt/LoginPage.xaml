@@ -10,7 +10,7 @@
   NavigationPage.HasNavigationBar="false"
 >
   <RelativeLayout>
-    <FlexLayout Direction="Column" AlignItems="Center">
+    <FlexLayout JustifyContent="SpaceEvenly" AlignItems="Center" Direction="Column">
       <RelativeLayout>
         <Image
           x:Name="bgImg"
@@ -19,16 +19,111 @@
           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.57}"
         />
-        <Image
-          x:Name="logoImg"
-          Source="Logo.png"
-          Aspect="AspectFill"
-          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Width, Factor=.7}"
-          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Height, Factor=.6}"
-          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Width, Factor=.15}"
-          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Height, Factor=.2}"
+        <FlexLayout
+          Direction="Column"
+          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Width, Factor=1}"
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bgImg, Property=Height, Factor=1}"
+          AlignItems="Center"
+        >
+          <FlexLayout FlexLayout.Grow="1" JustifyContent="Center" AlignItems="Center">
+            <Image
+              x:Name="logoImg"
+              Source="LoginLogo.png"
+              Aspect="AspectFit"
+              Margin="90, 0, 90, 0"
+            />
+
+          </FlexLayout>
+          <RelativeLayout>
+            <Image Source="LoginIDBar.png"
+              x:Name="loginIdBar"
+              Aspect="AspectFit"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+            />
+            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=loginIdBar, Property=Width, Factor=1}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=loginIdBar, Property=Height, Factor=1}"
+            >
+              <Label Text="YOUR PARTICIPANT ID" Font="17" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+              <Label Text="555-789-2018" Font="30" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Margin="0, 5, 0, 0" />
+            </FlexLayout>
+          </RelativeLayout>
+        </FlexLayout>
+      </RelativeLayout>
+      
+      <FlexLayout FlexLayout.Grow="1" Direction="Column" AlignItems="Center">
+        <RelativeLayout Margin="0, 20, 0, 0">
+          <local:MyEntry
+            Placeholder="Enter Password" PlaceholderColor="#333"
+            WidthRequest="250"
+            FontSize="14"
+            x:Name="passEntry"
+          >
+            <local:MyEntry.HeightRequest>
+              <OnPlatform x:TypeArguments="x:Double">
+                <On Platform="iOS">35</On>
+                <On Platform="Android">45</On>
+              </OnPlatform>
+            </local:MyEntry.HeightRequest>
+          </local:MyEntry>
+          <Image
+            Source="LockIcon.png"
+            HeightRequest="25"
+            Aspect="AspectFit"
+            Margin="230, 5, 0, 0"
+          />
+        </RelativeLayout>
+        <RelativeLayout Margin="0, 20, 0, 0">
+          <local:MyEntry
+            Placeholder="Confirm Password" PlaceholderColor="#333"
+            WidthRequest="250"
+            FontSize="14"
+            x:Name="confirmEntry"
+          >
+            <local:MyEntry.HeightRequest>
+              <OnPlatform x:TypeArguments="x:Double">
+                <On Platform="iOS">35</On>
+                <On Platform="Android">45</On>
+              </OnPlatform>
+            </local:MyEntry.HeightRequest>
+          </local:MyEntry>
+          <Image
+            Source="LockIcon.png"
+            HeightRequest="25"
+            Aspect="AspectFit"
+            Margin="230, 5, 0, 0"
+          />
+        </RelativeLayout>
+        <StackLayout>
+          <Image
+            x:Name="loginImageBtn"
+            Source="LoginBtn.png"
+            Aspect="AspectFit"
+            HeightRequest="40"
+            Margin="0, 30, 0, 0"
+          />
+        </StackLayout>
+      </FlexLayout>
+      
+      <RelativeLayout>
+        <Image Source="BottomNav.png" x:Name="bottomNavImg" />
+        <Label
+          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bottomNavImg, Property=Width, Factor=1}"
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bottomNavImg, Property=Height, Factor=1}"
+          Text="Need Help? Tap here to talk to a trial coordinator"
+          HorizontalTextAlignment="Center"
+          VerticalTextAlignment="Center"
+          FontSize="15"
+          TextColor="#333"
+          MaxLines="2"
+          Margin="80, 0, 80, 0"
         />
       </RelativeLayout>
+      
+    </FlexLayout>
+    
+    <FlexLayout AlignItems="Center" JustifyContent="Center" x:Name="activityIndicatorLayout">
+      <ActivityIndicator x:Name="loginPageActivityIndicator" IsRunning="true" VerticalOptions="Center"></ActivityIndicator>
     </FlexLayout>
   </RelativeLayout>
 </ContentPage>
