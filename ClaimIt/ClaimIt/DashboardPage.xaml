@@ -4,4 +4,20 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
   x:Class="ClaimIt.DashboardPage"
 >
+  <RelativeLayout>
+    <StackLayout>
+      <Label x:Name="yearLabel" Text="April 2018" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" Margin="0, 10, 0, 0" />
+      <FlexLayout Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center" Margin="10, 0, 10, 0" >
+        <Label WidthRequest="50" Text="Mon" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+        <Label WidthRequest="50" Text="Tue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+        <Label WidthRequest="50" Text="Wed" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+        <Label WidthRequest="50" Text="Tur" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+        <Label WidthRequest="50" Text="Fri" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+        <Label WidthRequest="50" Text="Sat" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+        <Label WidthRequest="50" Text="Sun" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+      </FlexLayout>
+      <StackLayout x:Name="dynamicDayViewCarousel" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+      <Label x:Name="indexLabel" />
+    </StackLayout>
+  </RelativeLayout>
 </ContentPage>

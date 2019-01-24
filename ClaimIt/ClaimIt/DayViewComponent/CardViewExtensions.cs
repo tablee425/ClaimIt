@@ -6,8 +6,10 @@ namespace ClaimIt.DayViewComponent
 {
   public static class CardViewExtensions
   {
-    public static DayView AsDayView(this BindableObject bindable)
-    => bindable as DayView;
+    public static CardsView AsCardsView(this BindableObject bindable)
+    => bindable as CardsView;
+    public static CardsView AsCarouselView(this BindableObject bindable)
+    => bindable as CarouselView;
 
     public static View CreateView(this DataTemplate template)
     {

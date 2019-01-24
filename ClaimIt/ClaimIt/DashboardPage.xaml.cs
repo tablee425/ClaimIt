@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using ClaimIt.DayViewComponent;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
 
@@ -8,89 +9,119 @@ namespace ClaimIt
 {
   public partial class DashboardPage : ContentPage
   {
+    private View GetCardItem() => new CardItem();
+
     public DashboardPage(double width)
     {
       InitializeComponent();
-      var itemTemplate = new DataTemplate(() =>
+
+      var carousel = new DayViewComponent.CarouselView
       {
-        var layout = new AbsoluteLayout()
-        {
-          WidthRequest = width / 7,
-        };
-        var fLabel = new Frame()
-        {
-          CornerRadius = 5,
-          Padding = 0
-        };
-        var frame = new Frame()
-        {
-          Padding = 0,
-          HasShadow = false,
-          CornerRadius = 10,
-          IsClippedToBounds = true
-        };
-        layout.Children.Add(frame, new Rectangle(.5, .5, width / 10, width / 10), AbsoluteLayoutFlags.PositionProportional);
-        layout.Children.Add(fLabel, new Rectangle(.5, .6, width / 12, width / 12), AbsoluteLayoutFlags.PositionProportional);
-
-        fLabel.SetBinding(BackgroundColorProperty, "Color");
-        frame.SetBinding(BackgroundColorProperty, "Color");
-        var label = new Label
-        {
-          TextColor = Color.White,
-          HorizontalOptions = LayoutOptions.Center,
-          VerticalOptions = LayoutOptions.Center,
-          HorizontalTextAlignment = TextAlignment.Center,
-          VerticalTextAlignment = TextAlignment.Center,
-          FontAttributes = FontAttributes.Bold,
-          FontSize = 16
-        };
-        label.SetBinding(Label.TextProperty, "Text");
-        fLabel.Content = label;
-
-        var image = new CachedImage
-        {
-          Aspect = Aspect.AspectFill,
-        };
-        //image.SetBinding(CachedImage.SourceProperty, "Source");
-        //frame.Content = image;
-
-        return layout;
-      });
-
-      var coverFlowCentered = new DayViewComponent.DayView
-      {
-        ItemTemplate = itemTemplate,
-        ViewAlignment = DayViewComponent.DayPosition.Center,
-        FirstItemPosition = DayViewComponent.DayPosition.Center,
-        Spacing = 15,
-        IsCyclical = true
+        ItemTemplate = new DataTemplate(GetCardItem),
       };
+      carousel.ItemAppearing += Carousel_ItemAppearing;
+      carousel.SetBinding(CardsView.ItemsSourceProperty, nameof(CarouselSampleViewModel.Items));
+      BindingContext = new CarouselSampleViewModel();
 
-      coverFlowCentered.SetBinding(DayViewComponent.DayView.ItemsSourceProperty, nameof(DayViewComponent.DayViewModel.Items));
-
-      BackgroundColor = Color.White;
-      Title = "CoverFlowSampleView";
-
-      var scrollView = new ScrollView()
-      {
-        Orientation = ScrollOrientation.Vertical,
-        HorizontalOptions = LayoutOptions.FillAndExpand,
-        VerticalOptions = LayoutOptions.FillAndExpand,
+      var parentScrollView = new DayViewComponent.ParentScrollView {
+        Content = new StackLayout {
+          Children = { carousel }
+        }
       };
-      var stack = new StackLayout
+      dynamicDayViewCarousel.Children.Add(parentScrollView);
+    }
+
+    void Carousel_ItemAppearing(CardsView view, ItemAppearingEventArgs args)
+    {
+      indexLabel.Text = view.OldIndex.ToString() + "..." + view.SelectedIndex.ToString();
+    }
+
+  }
+
+  public class CardItem : ContentView
+  {
+    public CardItem()
+    {
+      var label1 = new Label
       {
-        HorizontalOptions = LayoutOptions.FillAndExpand,
-        VerticalOptions = LayoutOptions.FillAndExpand,
-        Spacing = 5,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 30,
+        FontAttributes = FontAttributes.Bold,
+        WidthRequest = 50
       };
-
-
-      stack.Children.Add(coverFlowCentered);
-
-      scrollView.Content = stack;
-
-      Content = scrollView;
-      BindingContext = new DayViewComponent.DayViewModel();
+      var label2 = new Label
+      {
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 30,
+        FontAttributes = FontAttributes.Bold,
+        WidthRequest = 50
+      };
+      var label3 = new Label
+      {
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 30,
+        FontAttributes = FontAttributes.Bold,
+        WidthRequest = 50
+      };
+      var label4 = new Label
+      {
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 30,
+        FontAttributes = FontAttributes.Bold,
+        WidthRequest = 50
+      };
+      var label5 = new Label
+      {
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 30,
+        FontAttributes = FontAttributes.Bold,
+        WidthRequest = 50
+      };
+      var label6 = new Label
+      {
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 30,
+        FontAttributes = FontAttributes.Bold,
+        WidthRequest = 50
+      };
+      var label7 = new Label
+      {
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 30,
+        FontAttributes = FontAttributes.Bold,
+        WidthRequest = 50
+      };
+      label1.SetBinding(Label.TextProperty, "Page");
+      label2.SetBinding(Label.TextProperty, "Page");
+      label3.SetBinding(Label.TextProperty, "Page");
+      label4.SetBinding(Label.TextProperty, "Page");
+      label5.SetBinding(Label.TextProperty, "Page");
+      label6.SetBinding(Label.TextProperty, "Page");
+      label7.SetBinding(Label.TextProperty, "Page");
+      Content = new FlexLayout
+      {
+        Direction = FlexDirection.Row,
+        JustifyContent = FlexJustify.SpaceBetween,
+        AlignItems = FlexAlignItems.Center,
+        Margin = new Thickness(10, 0, 10, 0),
+        Children =
+        {
+          label1,
+          label2,
+          label3,
+          label4,
+          label5,
+          label6,
+          label7
+        }
+      };
     }
   }
 }
