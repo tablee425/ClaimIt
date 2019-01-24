@@ -24,4 +24,7 @@
     <EmbeddedResource Remove="Pages\VerificationPage\Contents\VerifyIDStep.xaml" />
     <EmbeddedResource Remove="MyCarouselPage.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DayViewComponent\" />
+  </ItemGroup>
 </Project>

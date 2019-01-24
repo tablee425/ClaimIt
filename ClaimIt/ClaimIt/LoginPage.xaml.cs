@@ -21,7 +21,7 @@ namespace ClaimIt
       activityIndicatorLayout.IsVisible = true;
       await Task.Delay(1000);
       activityIndicatorLayout.IsVisible = false;
-      var dashboardPage = new DashboardPage();
+      var dashboardPage = new DashboardPage(Width);
       await Navigation.PushAsync(dashboardPage);
     }
   }

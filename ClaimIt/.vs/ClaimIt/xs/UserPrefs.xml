@@ -1,12 +1,19 @@
 ﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/DashboardPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="13" Column="7" />
-      <File FileName="ClaimIt/DashboardPage.xaml" Line="7" Column="1" />
-      <File FileName="ClaimIt/LoginPage.xaml.cs" Line="29" Column="1" />
+      <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="32" Column="108" />
+      <File FileName="ClaimIt/DashboardPage.xaml" Line="8" Column="1" />
+      <File FileName="ClaimIt/LoginPage.xaml.cs" Line="24" Column="52" />
       <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="21" Column="1" />
       <File FileName="ClaimIt/VerificationPage.xaml" Line="24" Column="28" />
       <File FileName="ClaimIt/LoginPage.xaml" Line="26" Column="30" />
+      <File FileName="ClaimIt/DayViewComponent/DayViewModel.cs" Line="29" Column="92" />
+      <File FileName="ClaimIt/DayViewComponent/DayView.cs" Line="479" Column="65" />
+      <File FileName="ClaimIt/DayViewComponent/CardViewExtensions.cs" Line="23" Column="8" />
+      <File FileName="ClaimIt/DayViewComponent/BaseDayViewProcessor.cs" Line="29" Column="89" />
+      <File FileName="ClaimIt/DayViewComponent/DayPosition.cs" Line="11" Column="15" />
+      <File FileName="ClaimIt/DayViewComponent/AnimationDirection.cs" Line="11" Column="2" />
+      <File FileName="ClaimIt/App.xaml.cs" Line="14" Column="61" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ClaimIt.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0715f7e404453138" />

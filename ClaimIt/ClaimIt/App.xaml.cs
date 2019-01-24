@@ -11,9 +11,7 @@ namespace ClaimIt
     {
       InitializeComponent();
 
-      //MainPage = new NavigationPage(new VerificationPage());
-      MainPage = new NavigationPage(new DashboardPage());
-      //MainPage = new NavigationPage(new MyCarouselPage());
+      MainPage = new NavigationPage(new VerificationPage());
     }
 
     protected override void OnStart()
