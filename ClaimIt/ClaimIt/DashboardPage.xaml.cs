@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
+using System.Linq;
 using ClaimIt.DayViewComponent;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
@@ -10,10 +12,39 @@ namespace ClaimIt
   public partial class DashboardPage : ContentPage
   {
     private View GetCardItem() => new CardItem();
+    private int dayOfWeek = 0;
 
     public DashboardPage(double width)
     {
       InitializeComponent();
+
+      switch (DateTime.Now.DayOfWeek.ToString())
+      {
+        case "Monday":
+          dayOfWeek = 0;
+          break;
+        case "Tuesday":
+          dayOfWeek = 1;
+          break;
+        case "Wednesday":
+          dayOfWeek = 2;
+          break;
+        case "Thursday":
+          dayOfWeek = 3;
+          break;
+        case "Friday":
+          dayOfWeek = 4;
+          break;
+        case "Saturday":
+          dayOfWeek = 5;
+          break;
+        case "Sunday":
+          dayOfWeek = 6;
+          break;
+        default:
+          dayOfWeek = 0;
+          break;
+      }
 
       var carousel = new DayViewComponent.CarouselView
       {
@@ -33,9 +64,24 @@ namespace ClaimIt
 
     void Carousel_ItemAppearing(CardsView view, ItemAppearingEventArgs args)
     {
-      indexLabel.Text = view.OldIndex.ToString() + "..." + view.SelectedIndex.ToString();
+      var months = new List<string>(CultureInfo.CurrentCulture.DateTimeFormat.MonthNames.Select(dayName => dayName).ToList());
+      DateTime thatDate = DateTime.Now.AddDays(3 - dayOfWeek + GetPage(view.SelectedIndex + 1) * 7);
+      yearLabel.Text = months[thatDate.Month - 1] + " " + thatDate.Year;
     }
 
+    private int GetPage(int i)
+    {
+      int page = 0;
+      if (i > 10)
+      {
+        page = i - 20 - 1;
+      }
+      else
+      {
+        page = i - 1;
+      }
+      return page;
+    }
   }
 
   public class CardItem : ContentView
@@ -46,65 +92,156 @@ namespace ClaimIt
       {
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 30,
+        FontSize = 15,
         FontAttributes = FontAttributes.Bold,
-        WidthRequest = 50
+        WidthRequest = 36,
+        HeightRequest = 36
       };
       var label2 = new Label
       {
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 30,
+        FontSize = 15,
         FontAttributes = FontAttributes.Bold,
-        WidthRequest = 50
+        WidthRequest = 36,
+        HeightRequest = 36
       };
       var label3 = new Label
       {
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 30,
+        FontSize = 15,
         FontAttributes = FontAttributes.Bold,
-        WidthRequest = 50
+        WidthRequest = 36,
+        HeightRequest = 36
       };
       var label4 = new Label
       {
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 30,
+        FontSize = 15,
         FontAttributes = FontAttributes.Bold,
-        WidthRequest = 50
+        WidthRequest = 36,
+        HeightRequest = 36
       };
       var label5 = new Label
       {
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 30,
+        FontSize = 15,
         FontAttributes = FontAttributes.Bold,
-        WidthRequest = 50
+        WidthRequest = 36,
+        HeightRequest = 36
       };
       var label6 = new Label
       {
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 30,
+        FontSize = 15,
         FontAttributes = FontAttributes.Bold,
-        WidthRequest = 50
+        WidthRequest = 36,
+        HeightRequest = 36
       };
       var label7 = new Label
       {
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalTextAlignment = TextAlignment.Center,
-        FontSize = 30,
+        FontSize = 15,
         FontAttributes = FontAttributes.Bold,
-        WidthRequest = 50
+        WidthRequest = 36,
+        HeightRequest = 36
       };
-      label1.SetBinding(Label.TextProperty, "Page");
-      label2.SetBinding(Label.TextProperty, "Page");
-      label3.SetBinding(Label.TextProperty, "Page");
-      label4.SetBinding(Label.TextProperty, "Page");
-      label5.SetBinding(Label.TextProperty, "Page");
-      label6.SetBinding(Label.TextProperty, "Page");
-      label7.SetBinding(Label.TextProperty, "Page");
+      var labelFrame1 = new Frame
+      {
+        CornerRadius = 18,
+        WidthRequest = 36,
+        HeightRequest = 36,
+        HasShadow = false,
+        IsClippedToBounds = true,
+        Content = label1,
+        Padding = 0
+      };
+      var labelFrame2 = new Frame
+      {
+        CornerRadius = 18,
+        WidthRequest = 36,
+        HeightRequest = 36,
+        HasShadow = false,
+        IsClippedToBounds = true,
+        Content = label2,
+        Padding = 0
+      };
+      var labelFrame3 = new Frame
+      {
+        CornerRadius = 18,
+        WidthRequest = 36,
+        HeightRequest = 36,
+        HasShadow = false,
+        IsClippedToBounds = true,
+        Content = label3,
+        Padding = 0
+      };
+      var labelFrame4 = new Frame
+      {
+        CornerRadius = 18,
+        WidthRequest = 36,
+        HeightRequest = 36,
+        HasShadow = false,
+        IsClippedToBounds = true,
+        Content = label4,
+        Padding = 0
+      };
+      var labelFrame5 = new Frame
+      {
+        CornerRadius = 18,
+        WidthRequest = 36,
+        HeightRequest = 36,
+        HasShadow = false,
+        Content = label5,
+        Padding = 0
+      };
+      var labelFrame6 = new Frame
+      {
+        CornerRadius = 18,
+        WidthRequest = 36,
+        HeightRequest = 36,
+        HasShadow = false,
+        IsClippedToBounds = true,
+        Content = label6,
+        Padding = 0
+      };
+      var labelFrame7 = new Frame
+      {
+        CornerRadius = 18,
+        WidthRequest = 36,
+        HeightRequest = 36,
+        HasShadow = false,
+        IsClippedToBounds = true,
+        Content = label7,
+        Padding = 0
+      };
+      label1.SetBinding(Label.TextProperty, "Day1");
+      label1.SetBinding(Label.TextColorProperty, "DayColor1");
+      labelFrame1.SetBinding(BackgroundColorProperty, "Color1");
+      label2.SetBinding(Label.TextProperty, "Day2");
+      label2.SetBinding(Label.TextColorProperty, "DayColor2");
+      labelFrame2.SetBinding(BackgroundColorProperty, "Color2");
+      label3.SetBinding(Label.TextProperty, "Day3");
+      label3.SetBinding(Label.TextColorProperty, "DayColor3");
+      labelFrame3.SetBinding(BackgroundColorProperty, "Color3");
+      label4.SetBinding(Label.TextProperty, "Day4");
+      label4.SetBinding(Label.TextColorProperty, "DayColor4");
+      labelFrame4.SetBinding(BackgroundColorProperty, "Color4");
+      label5.SetBinding(Label.TextProperty, "Day5");
+      label5.SetBinding(Label.TextColorProperty, "DayColor5");
+      labelFrame5.SetBinding(BackgroundColorProperty, "Color5");
+      label6.SetBinding(Label.TextProperty, "Day6");
+      label6.SetBinding(Label.TextColorProperty, "DayColor6");
+      labelFrame6.SetBinding(BackgroundColorProperty, "Color6");
+      label7.SetBinding(Label.TextProperty, "Day7");
+      label7.SetBinding(Label.TextColorProperty, "DayColor7");
+      labelFrame7.SetBinding(BackgroundColorProperty, "Color7");
+
       Content = new FlexLayout
       {
         Direction = FlexDirection.Row,
@@ -113,13 +250,13 @@ namespace ClaimIt
         Margin = new Thickness(10, 0, 10, 0),
         Children =
         {
-          label1,
-          label2,
-          label3,
-          label4,
-          label5,
-          label6,
-          label7
+          labelFrame1,
+          labelFrame2,
+          labelFrame3,
+          labelFrame4,
+          labelFrame5,
+          labelFrame6,
+          labelFrame7
         }
       };
     }

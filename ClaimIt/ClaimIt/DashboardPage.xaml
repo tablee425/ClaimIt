@@ -5,19 +5,19 @@
   x:Class="ClaimIt.DashboardPage"
 >
   <RelativeLayout>
+    <Image Source="BottomNav.png" Aspect="Fill" />
     <StackLayout>
       <Label x:Name="yearLabel" Text="April 2018" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" Margin="0, 10, 0, 0" />
       <FlexLayout Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center" Margin="10, 0, 10, 0" >
-        <Label WidthRequest="50" Text="Mon" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
-        <Label WidthRequest="50" Text="Tue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
-        <Label WidthRequest="50" Text="Wed" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
-        <Label WidthRequest="50" Text="Tur" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
-        <Label WidthRequest="50" Text="Fri" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
-        <Label WidthRequest="50" Text="Sat" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
-        <Label WidthRequest="50" Text="Sun" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" />
+        <Label WidthRequest="36" Text="Mon" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+        <Label WidthRequest="36" Text="Tue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+        <Label WidthRequest="36" Text="Wed" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+        <Label WidthRequest="36" Text="Tur" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+        <Label WidthRequest="36" Text="Fri" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+        <Label WidthRequest="36" Text="Sat" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+        <Label WidthRequest="36" Text="Sun" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
       </FlexLayout>
       <StackLayout x:Name="dynamicDayViewCarousel" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-      <Label x:Name="indexLabel" />
     </StackLayout>
   </RelativeLayout>
 </ContentPage>
