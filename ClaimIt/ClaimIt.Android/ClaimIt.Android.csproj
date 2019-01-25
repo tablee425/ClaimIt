@@ -103,6 +103,8 @@
     <AndroidResource Include="Resources\drawable\Question.png" />
     <AndroidResource Include="Resources\drawable\BlueBtnBack.png" />
     <AndroidResource Include="Resources\drawable\GreenBtnBack.png" />
+    <AndroidResource Include="Resources\drawable\Signature.jpeg" />
+    <AndroidResource Include="Resources\drawable\Close.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

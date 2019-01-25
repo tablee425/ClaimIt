@@ -11,30 +11,55 @@
   <ContentPage.Content>
     <RelativeLayout>
       <FlexLayout Direction="Column" VerticalOptions="FillAndExpand">
-        <Label Text="Please use your finger to sign on the line below" />
+        <RelativeLayout>
+          <Image Source="Signature.jpeg" Aspect="AspectFill"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+          />
+          <BoxView
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            HeightRequest="60"
+            BackgroundColor="Black"
+            Opacity="0.3"
+          />
+          <Image
+            Source="Close.png" HeightRequest="20" Aspect="AspectFit" HorizontalOptions="End"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-30}"
+            Margin="0, 20, 0, 0"
+          />
+          <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            HeightRequest="30"
+            Text="SIGNATURE"
+            FontSize="22"
+            FontAttributes="Bold"
+            TextColor="White"
+            Margin="0, 17, 0, 0"
+          />
+        </RelativeLayout>
+        <Label Text="Please use your finger to sign on the line below" HorizontalTextAlignment="Center" FontSize="12" FontAttributes="Bold" Margin="0, 15, 0, 0" />
         <FlexLayout HeightRequest="80" Direction="Row" BackgroundColor="White" JustifyContent="SpaceBetween" AlignItems="Center">
-          <RelativeLayout Margin="20, 0, 0, 0" x:Name="disagreeBtn">
-            <Image Source="BlueBtnBack.png" HeightRequest="50" WidthRequest="170" Aspect="Fill" x:Name="agreeBlueBtn" />
+          <RelativeLayout Margin="20, 0, 0, 0" x:Name="clearBtn">
+            <Image Source="BlueBtnBack.png" HeightRequest="50" WidthRequest="170" Aspect="Fill" x:Name="clearBlueBtn" />
             <Label
-              Text="DISAGREE"
+              Text="CLEAR"
               TextColor="White"
               FontSize="18"
               VerticalTextAlignment="Center"
               HorizontalTextAlignment="Center"
-              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeBlueBtn, Property=Width}"
-              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeBlueBtn, Property=Height}"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=clearBlueBtn, Property=Width}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=clearBlueBtn, Property=Height}"
             />
           </RelativeLayout>
-          <RelativeLayout Margin="0, 0, 20, 0" x:Name="agreeBtn">
-            <Image Source="GreenBtnBack.png" HeightRequest="50" WidthRequest="170" Aspect="Fill" x:Name="agreeGreenBtn" />
+          <RelativeLayout Margin="0, 0, 20, 0" x:Name="doneBtn">
+            <Image Source="GreenBtnBack.png" HeightRequest="50" WidthRequest="170" Aspect="Fill" x:Name="doneGreenBtn" />
             <Label
-              Text="AGREE"
+              Text="DONE"
               TextColor="White"
               FontSize="18"
               VerticalTextAlignment="Center"
               HorizontalTextAlignment="Center"
-              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeGreenBtn, Property=Width}"
-              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeGreenBtn, Property=Height}"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=doneGreenBtn, Property=Width}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=doneGreenBtn, Property=Height}"
             />
           </RelativeLayout>
         </FlexLayout>

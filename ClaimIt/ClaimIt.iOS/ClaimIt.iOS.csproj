@@ -178,5 +178,7 @@
     <BundleResource Include="Resources\Question.png" />
     <BundleResource Include="Resources\BlueBtnBack.png" />
     <BundleResource Include="Resources\GreenBtnBack.png" />
+    <BundleResource Include="Resources\Signature.jpeg" />
+    <BundleResource Include="Resources\Close.png" />
   </ItemGroup>
 </Project>
