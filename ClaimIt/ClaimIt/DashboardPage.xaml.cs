@@ -6,6 +6,7 @@ using System.Linq;
 using ClaimIt.DayViewComponent;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
+using ClaimIt.Models;
 
 namespace ClaimIt
 {
@@ -13,10 +14,14 @@ namespace ClaimIt
   {
     private View GetCardItem() => new CardItem();
     private int dayOfWeek = 0;
+    CalendarListViewModel itemListViewModel; // calendar page list view model
 
     public DashboardPage(double width)
     {
       InitializeComponent();
+
+      itemListViewModel = new CalendarListViewModel();
+      ItemsListView.BindingContext = itemListViewModel;
 
       switch (DateTime.Now.DayOfWeek.ToString())
       {
@@ -52,7 +57,7 @@ namespace ClaimIt
       };
       carousel.ItemAppearing += Carousel_ItemAppearing;
       carousel.SetBinding(CardsView.ItemsSourceProperty, nameof(CarouselSampleViewModel.Items));
-      BindingContext = new CarouselSampleViewModel();
+      carousel.BindingContext = new CarouselSampleViewModel();
 
       var parentScrollView = new DayViewComponent.ParentScrollView {
         Content = new StackLayout {
@@ -62,11 +67,22 @@ namespace ClaimIt
       dynamicDayViewCarousel.Children.Add(parentScrollView);
     }
 
+    protected override async void OnAppearing()
+    {
+      base.OnAppearing();
+      await itemListViewModel.UpdatePostsAsync();
+    }
+
     void Carousel_ItemAppearing(CardsView view, ItemAppearingEventArgs args)
     {
       var months = new List<string>(CultureInfo.CurrentCulture.DateTimeFormat.MonthNames.Select(dayName => dayName).ToList());
       DateTime thatDate = DateTime.Now.AddDays(3 - dayOfWeek + GetPage(view.SelectedIndex + 1) * 7);
       yearLabel.Text = months[thatDate.Month - 1] + " " + thatDate.Year;
+    }
+
+    void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+      Application.Current.MainPage.DisplayAlert("Test", "!", "Ok");
     }
 
     private int GetPage(int i)

@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/DayViewComponent/CarouselSampleViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/Models/CalendarListViewModel.cs">
     <Files>
-      <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="184" Column="60" />
-      <File FileName="ClaimIt/DayViewComponent/CarouselSampleViewModel.cs" Line="167" Column="39" />
-      <File FileName="ClaimIt/DashboardPage.xaml" Line="23" Column="1" />
+      <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="66" Column="6" />
+      <File FileName="ClaimIt/DayViewComponent/CarouselSampleViewModel.cs" Line="53" Column="6" />
+      <File FileName="ClaimIt/DashboardPage.xaml" Line="25" Column="29" />
       <File FileName="ClaimIt/DayViewComponent/CardViewExtensions.cs" Line="76" Column="23" />
       <File FileName="ClaimIt/DayViewComponent/CardsView.cs" Line="27" Column="29" />
       <File FileName="ClaimIt/DayViewComponent/TimeDiffItem.cs" Line="10" Column="1" />
@@ -11,6 +11,17 @@
       <File FileName="ClaimIt/DayViewComponent/CarouselView.cs" Line="15" Column="35" />
       <File FileName="ClaimIt/DayViewComponent/CardsViewUserInteractedHandler.cs" Line="4" Column="1" />
       <File FileName="ClaimIt/DayViewComponent/CardsViewItemSwipedHandler.cs" Line="4" Column="2" />
+      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml.cs" Line="1" Column="1" />
+      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml" Line="7" Column="24" />
+      <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="21" Column="1" />
+      <File FileName="ClaimIt/ContentVerifyStep.xaml" Line="39" Column="1" />
+      <File FileName="ClaimIt.Android/NativeAndroidListViewAdapter.cs" Line="61" Column="75" />
+      <File FileName="ClaimIt.iOS/NativeiOSListViewCell.cs" Line="34" Column="48" />
+      <File FileName="ClaimIt.iOS/NativeiOSListViewRenderer.cs" Line="37" Column="1" />
+      <File FileName="ClaimIt/Helpers/JsonPlaceholderHelper.cs" Line="20" Column="22" />
+      <File FileName="ClaimIt/Models/Post.cs" Line="20" Column="41" />
+      <File FileName="ClaimIt/Models/BaseViewModel.cs" Line="20" Column="13" />
+      <File FileName="ClaimIt/Models/CalendarListViewModel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ClaimIt.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0715f7e404453138" />

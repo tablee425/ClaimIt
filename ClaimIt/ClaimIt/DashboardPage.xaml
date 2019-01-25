@@ -4,20 +4,64 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
   x:Class="ClaimIt.DashboardPage"
 >
-  <RelativeLayout>
-    <Image Source="BottomNav.png" Aspect="Fill" />
-    <StackLayout>
-      <Label x:Name="yearLabel" Text="April 2018" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" Margin="0, 10, 0, 0" />
-      <FlexLayout Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center" Margin="10, 0, 10, 0" >
-        <Label WidthRequest="36" Text="Mon" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
-        <Label WidthRequest="36" Text="Tue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
-        <Label WidthRequest="36" Text="Wed" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
-        <Label WidthRequest="36" Text="Tur" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
-        <Label WidthRequest="36" Text="Fri" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
-        <Label WidthRequest="36" Text="Sat" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
-        <Label WidthRequest="36" Text="Sun" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
-      </FlexLayout>
-      <StackLayout x:Name="dynamicDayViewCarousel" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-    </StackLayout>
-  </RelativeLayout>
+  <StackLayout>
+    <RelativeLayout>
+      <Image Source="BottomNav.png" Aspect="Fill" />
+      <StackLayout>
+        <Label x:Name="yearLabel" Text="April 2018" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" Margin="0, 10, 0, 0" />
+        <FlexLayout Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center" Margin="10, 0, 10, 0" >
+          <Label WidthRequest="36" Text="Mon" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+          <Label WidthRequest="36" Text="Tue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+          <Label WidthRequest="36" Text="Wed" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+          <Label WidthRequest="36" Text="Tur" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+          <Label WidthRequest="36" Text="Fri" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+          <Label WidthRequest="36" Text="Sat" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+          <Label WidthRequest="36" Text="Sun" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="17" FontAttributes="Bold" TextColor="#333" />
+        </FlexLayout>
+        <StackLayout x:Name="dynamicDayViewCarousel" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+      </StackLayout>
+    </RelativeLayout>
+    <ListView
+      x:Name="ItemsListView"
+      ItemsSource="{Binding Posts}"
+      HasUnevenRows="true"
+      CachingStrategy="RetainElement"
+      SeparatorVisibility="None"
+      SelectionMode="None"
+      Margin="0, 15, 0, 0"
+      RowHeight="90"
+    >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Vertical" Padding="15, 10, 15, 0" HeightRequest="80">
+              <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" HeightRequest="30">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                  <Image Source="LockIcon.png" HeightRequest="30" Aspect="AspectFit" />
+                  <Label Text="PENDING TASKS" VerticalTextAlignment="Center" TextColor="Green" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                  <Frame Padding="0" BackgroundColor="Gray" WidthRequest="30" HeightRequest="30" CornerRadius="15" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="1" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Green" />
+                  </Frame>
+                  <Image Source="LockIcon.png" HeightRequest="30" Aspect="AspectFit" />
+                </StackLayout>
+              </FlexLayout>
+              <FlexLayout JustifyContent="Start" AlignItems="Center" HeightRequest="30">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                  <Image Source="LockIcon.png" HeightRequest="30" Aspect="AspectFit" />
+                  <Label Text="eIC - Stool Study Outline" VerticalTextAlignment="Center" FontSize="14" />
+                </StackLayout>
+              </FlexLayout>
+              
+<!--              <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                <Image Source="{Binding ImageUrl}" WidthRequest="50" HeightRequest="50" />
+                <Label Text="{Binding Title}" VerticalTextAlignment="Center" FontSize="Small" />
+              </StackLayout>
+-->            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
 </ContentPage>
