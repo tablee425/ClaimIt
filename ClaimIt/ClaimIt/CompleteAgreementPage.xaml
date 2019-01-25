@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="ClaimIt.CompleteAgreementPage"
+  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+  ios:Page.UseSafeArea="true"
+  Title="Agreement Page"
+  NavigationPage.HasNavigationBar="false"
+>
+  <ContentPage.Content>
+    <RelativeLayout>
+      <FlexLayout Direction="Column" VerticalOptions="FillAndExpand">
+        <StackLayout HeightRequest="60" BackgroundColor="#4bafca" Padding="15, 35, 15, 0">
+          <FlexLayout Direction="Row" HeightRequest="25" JustifyContent="Center" AlignItems="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Text="Complete Agreement" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="18" FontAttributes="Bold" />
+          </FlexLayout>
+        </StackLayout>
+        <FlexLayout FlexLayout.Grow="1" BackgroundColor="Gray" />
+        <FlexLayout HeightRequest="80" Direction="Row" BackgroundColor="White" JustifyContent="SpaceBetween" AlignItems="Center">
+          <RelativeLayout Margin="20, 0, 0, 0" x:Name="disagreeBtn">
+            <Image Source="BlueBtnBack.png" HeightRequest="50" WidthRequest="170" Aspect="Fill" x:Name="agreeBlueBtn" />
+            <Label
+              Text="DISAGREE"
+              TextColor="White"
+              FontSize="18"
+              VerticalTextAlignment="Center"
+              HorizontalTextAlignment="Center"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeBlueBtn, Property=Width}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeBlueBtn, Property=Height}"
+            />
+          </RelativeLayout>
+          <RelativeLayout Margin="0, 0, 20, 0" x:Name="agreeBtn">
+            <Image Source="GreenBtnBack.png" HeightRequest="50" WidthRequest="170" Aspect="Fill" x:Name="agreeGreenBtn" />
+            <Label
+              Text="AGREE"
+              TextColor="White"
+              FontSize="18"
+              VerticalTextAlignment="Center"
+              HorizontalTextAlignment="Center"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeGreenBtn, Property=Width}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreeGreenBtn, Property=Height}"
+            />
+          </RelativeLayout>
+        </FlexLayout>
+        <RelativeLayout>
+          <Image Source="BottomNav.png" x:Name="agreementBottomNav" />
+          <Label
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreementBottomNav, Property=Width, Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=agreementBottomNav, Property=Height, Factor=1}"
+            Text="Need Help? Tap here to talk to a trial coordinator"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="15"
+            TextColor="#333"
+            MaxLines="2"
+            Margin="80, 0, 80, 0"
+          />
+        </RelativeLayout>
+      </FlexLayout>
+    </RelativeLayout>
+  </ContentPage.Content>
+</ContentPage>

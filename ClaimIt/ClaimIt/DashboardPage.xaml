@@ -3,8 +3,19 @@
   xmlns="http://xamarin.com/schemas/2014/forms"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
   x:Class="ClaimIt.DashboardPage"
+  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+  ios:Page.UseSafeArea="true"
+  Title="Dashboard Page"
+  NavigationPage.HasNavigationBar="false"
 >
   <StackLayout>
+    <StackLayout HeightRequest="60" BackgroundColor="#4bafca" Padding="15, 35, 15, 0">
+      <FlexLayout Direction="Row" HeightRequest="25" JustifyContent="SpaceBetween" AlignItems="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="Menu.png" HeightRequest="25" Aspect="AspectFit" />
+        <Label Text="10 APR 2018 - PRE SCREEN" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="18" FontAttributes="Bold" />
+        <Image Source="Question.png" HeightRequest="25" Aspect="AspectFit" />
+      </FlexLayout>
+    </StackLayout>
     <RelativeLayout>
       <Image Source="BottomNav.png" Aspect="Fill" />
       <StackLayout>
@@ -27,7 +38,6 @@
       HasUnevenRows="true"
       CachingStrategy="RetainElement"
       SeparatorVisibility="None"
-      SelectionMode="None"
       Margin="0, 15, 0, 0"
       RowHeight="90"
     >

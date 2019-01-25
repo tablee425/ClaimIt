@@ -99,6 +99,10 @@
     <AndroidResource Include="Resources\drawable\LoginIDBar.png" />
     <AndroidResource Include="Resources\drawable\LockIcon.png" />
     <AndroidResource Include="Resources\drawable\LoginBtn.png" />
+    <AndroidResource Include="Resources\drawable\Menu.png" />
+    <AndroidResource Include="Resources\drawable\Question.png" />
+    <AndroidResource Include="Resources\drawable\BlueBtnBack.png" />
+    <AndroidResource Include="Resources\drawable\GreenBtnBack.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

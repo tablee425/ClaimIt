@@ -174,5 +174,9 @@
     <BundleResource Include="Resources\LoginIDBar.png" />
     <BundleResource Include="Resources\LockIcon.png" />
     <BundleResource Include="Resources\LoginBtn.png" />
+    <BundleResource Include="Resources\Menu.png" />
+    <BundleResource Include="Resources\Question.png" />
+    <BundleResource Include="Resources\BlueBtnBack.png" />
+    <BundleResource Include="Resources\GreenBtnBack.png" />
   </ItemGroup>
 </Project>

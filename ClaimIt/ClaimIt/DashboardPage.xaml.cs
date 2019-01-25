@@ -22,6 +22,7 @@ namespace ClaimIt
 
       itemListViewModel = new CalendarListViewModel();
       ItemsListView.BindingContext = itemListViewModel;
+      ItemsListView.ItemSelected += async delegate (object sender, SelectedItemChangedEventArgs e) { await OnItemSelectedAsync(sender, e); };
 
       switch (DateTime.Now.DayOfWeek.ToString())
       {
@@ -80,9 +81,10 @@ namespace ClaimIt
       yearLabel.Text = months[thatDate.Month - 1] + " " + thatDate.Year;
     }
 
-    void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+    async System.Threading.Tasks.Task OnItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
     {
-      Application.Current.MainPage.DisplayAlert("Test", "!", "Ok");
+      var agreementPage = new CompleteAgreementPage();
+      await Navigation.PushAsync(agreementPage);
     }
 
     private int GetPage(int i)
