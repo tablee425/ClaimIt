@@ -17,7 +17,7 @@ namespace ClaimIt
 
       var tapAgree = new TapGestureRecognizer();
       tapAgree.Tapped += async delegate (object sender, EventArgs e) { await tapAgree_TappedAsync(sender, e); };
-      disagreeBtn.GestureRecognizers.Add(tapAgree);
+      agreeBtn.GestureRecognizers.Add(tapAgree);
     }
 
     async System.Threading.Tasks.Task tapDisagree_TappedAsync(object sender, EventArgs e)
@@ -27,7 +27,8 @@ namespace ClaimIt
 
     async System.Threading.Tasks.Task tapAgree_TappedAsync(object sender, EventArgs e)
     {
-
+      var signatures = new SignaturesPage();
+      await Navigation.PushAsync(signatures);
     }
   }
 }

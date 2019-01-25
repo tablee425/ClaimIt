@@ -1,17 +1,19 @@
 ﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/LoginPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/CompleteAgreementPage.xaml">
     <Files>
       <File FileName="ClaimIt/Models/BaseViewModel.cs" Line="21" Column="19" />
-      <File FileName="ClaimIt/DashboardPage.xaml" Line="11" Column="16" />
+      <File FileName="ClaimIt/DashboardPage.xaml" Line="38" Column="27" />
       <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="25" Column="1" />
-      <File FileName="ClaimIt/CompleteAgreementPage.xaml" Line="13" Column="47" />
+      <File FileName="ClaimIt/CompleteAgreementPage.xaml" Line="9" Column="42" />
       <File FileName="ClaimIt/ContentEnterPasswordStep.xaml" Line="16" Column="1" />
       <File FileName="ClaimIt/ImageResourceExtension.cs" Line="1" Column="1" />
-      <File FileName="ClaimIt/CompleteAgreementPage.xaml.cs" Line="11" Column="6" />
-      <File FileName="ClaimIt/LoginPage.xaml.cs" Line="29" Column="1" />
+      <File FileName="ClaimIt/CompleteAgreementPage.xaml.cs" Line="30" Column="7" />
+      <File FileName="ClaimIt/LoginPage.xaml.cs" Line="28" Column="2" />
       <File FileName="ClaimIt/App.xaml.cs" Line="15" Column="66" />
-      <File FileName="ClaimIt/LoginPage.xaml" Line="35" Column="13" />
+      <File FileName="ClaimIt/LoginPage.xaml" Line="99" Column="34" />
       <File FileName="ClaimIt/VerificationPage.xaml" Line="53" Column="1" />
+      <File FileName="ClaimIt/SignaturesPage.xaml" Line="6" Column="1" />
+      <File FileName="ClaimIt/SignaturesPage.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ClaimIt.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0715f7e404453138" />
