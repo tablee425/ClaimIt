@@ -129,7 +129,7 @@ namespace ClaimIt
         {
           // handle done
           num10.Unfocus();
-          VerifyEvent?.Invoke(num1.Text + num2.Text + num3.Text + num4.Text + num5.Text + num6.Text + num7.Text + num8.Text + num9.Text + num10.Text);
+          VerifyEvent?.Invoke(num1.Text + num2.Text + num3.Text + "-" + num4.Text + num5.Text + num6.Text +"-" + num7.Text + num8.Text + num9.Text + num10.Text);
         }
       }
     }

@@ -45,7 +45,7 @@ namespace ClaimIt
       await Task.Delay(1000);
       activityIndicatorLayout.IsVisible = false;
       verifiedCode = code;
-      if (code == "0000000000") // This is only for test 
+      if (code == "000-000-0000" || code == "111-111-1111") // This is only for test 
       {
         addContentPasswordStepPage();
       }

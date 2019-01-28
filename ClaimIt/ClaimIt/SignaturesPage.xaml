@@ -22,12 +22,6 @@
             BackgroundColor="Black"
             Opacity="0.3"
           />
-          <Image
-            Source="Close.png" HeightRequest="20" Aspect="AspectFit" HorizontalOptions="End"
-            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-30}"
-            Margin="0, 20, 0, 0"
-            x:Name="closeImageBtn"
-          />
           <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
             HeightRequest="30"
@@ -36,6 +30,12 @@
             FontAttributes="Bold"
             TextColor="White"
             Margin="0, 17, 0, 0"
+          />
+          <Image
+            Source="Close.png" HeightRequest="20" Aspect="AspectFit" HorizontalOptions="End"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-30}"
+            Margin="0, 20, 0, 0"
+            x:Name="closeImageBtn"
           />
         </RelativeLayout>
         <Label Text="Please use your finger to sign on the line below" HorizontalTextAlignment="Center" FontSize="12" FontAttributes="Bold" Margin="0, 15, 0, 0" />

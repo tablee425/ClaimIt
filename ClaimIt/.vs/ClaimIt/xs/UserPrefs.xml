@@ -1,22 +1,25 @@
 ﻿<Properties StartupConfiguration="{B11ED7CB-7249-436F-A75F-53F597E65FBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/App.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClaimIt/ContentVerifyStep.xaml.cs">
     <Files>
       <File FileName="ClaimIt/Models/BaseViewModel.cs" Line="21" Column="19" />
       <File FileName="ClaimIt/DashboardPage.xaml" Line="38" Column="27" />
       <File FileName="ClaimIt/DashboardPage.xaml.cs" Line="156" Column="56" />
       <File FileName="ClaimIt/CompleteAgreementPage.xaml" Line="62" Column="25" />
-      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml" Line="16" Column="1" />
+      <File FileName="ClaimIt/ContentEnterPasswordStep.xaml" Line="11" Column="25" />
       <File FileName="ClaimIt/ImageResourceExtension.cs" Line="1" Column="1" />
       <File FileName="ClaimIt/CompleteAgreementPage.xaml.cs" Line="22" Column="1" />
       <File FileName="ClaimIt/LoginPage.xaml.cs" Line="29" Column="1" />
-      <File FileName="ClaimIt/App.xaml.cs" Line="14" Column="55" />
-      <File FileName="ClaimIt/LoginPage.xaml" Line="99" Column="34" />
+      <File FileName="ClaimIt/App.xaml.cs" Line="33" Column="1" />
+      <File FileName="ClaimIt/LoginPage.xaml" Line="52" Column="24" />
       <File FileName="ClaimIt/VerificationPage.xaml" Line="53" Column="1" />
-      <File FileName="ClaimIt/SignaturesPage.xaml" Line="48" Column="1" />
+      <File FileName="ClaimIt/SignaturesPage.xaml" Line="22" Column="36" />
       <File FileName="ClaimIt/SignaturesPage.xaml.cs" Line="27" Column="25" />
-      <File FileName="ClaimIt/ContentVerifyStep.xaml" Line="33" Column="62" />
-      <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="21" Column="1" />
+      <File FileName="ClaimIt/ContentVerifyStep.xaml" Line="34" Column="64" />
+      <File FileName="ClaimIt/ContentPasswordFailStep.xaml" Line="15" Column="18" />
       <File FileName="ClaimIt/MyEntry.cs" Line="1" Column="1" />
+      <File FileName="ClaimIt.iOS/Info.plist" />
+      <File FileName="ClaimIt/VerificationPage.xaml.cs" Line="22" Column="36" />
+      <File FileName="ClaimIt/ContentVerifyStep.xaml.cs" Line="132" Column="68" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ClaimIt.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0715f7e404453138" />

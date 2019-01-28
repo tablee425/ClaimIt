@@ -45,7 +45,7 @@
               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=loginIdBar, Property=Height, Factor=1}"
             >
               <Label Text="YOUR PARTICIPANT ID" Font="17" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-              <Label Text="555-789-2018" Font="30" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Margin="0, 5, 0, 0" />
+              <Label Text="{Binding ID}" Font="30" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Margin="0, 5, 0, 0" />
             </FlexLayout>
           </RelativeLayout>
         </FlexLayout>
