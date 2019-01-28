@@ -50,7 +50,7 @@ namespace ClaimIt
         default:
           dayOfWeek = 0;
           break;
-      }
+      } 
 
       var carousel = new DayViewComponent.CarouselView
       {

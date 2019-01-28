@@ -5,6 +5,7 @@
   x:Class="ClaimIt.SignaturesPage"
   xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
   ios:Page.UseSafeArea="true"
+  xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
   Title="Signatures Page"
   NavigationPage.HasNavigationBar="false"
 >
@@ -25,6 +26,7 @@
             Source="Close.png" HeightRequest="20" Aspect="AspectFit" HorizontalOptions="End"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-30}"
             Margin="0, 20, 0, 0"
+            x:Name="closeImageBtn"
           />
           <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
@@ -37,6 +39,22 @@
           />
         </RelativeLayout>
         <Label Text="Please use your finger to sign on the line below" HorizontalTextAlignment="Center" FontSize="12" FontAttributes="Bold" Margin="0, 15, 0, 0" />
+        <RelativeLayout HeightRequest="200" BackgroundColor="White" Margin="20">
+          <Frame
+            OutlineColor="Black"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+            BackgroundColor="White"
+            HasShadow="false"
+          >
+            <forms:SignaturePadCanvasView
+              x:Name="PadView"
+              BackgroundColor="White"
+              StrokeColor="Black"
+              StrokeWidth="1"
+            />
+          </Frame>
+        </RelativeLayout>
         <FlexLayout HeightRequest="80" Direction="Row" BackgroundColor="White" JustifyContent="SpaceBetween" AlignItems="Center">
           <RelativeLayout Margin="20, 0, 0, 0" x:Name="clearBtn">
             <Image Source="BlueBtnBack.png" HeightRequest="50" WidthRequest="170" Aspect="Fill" x:Name="clearBlueBtn" />
@@ -63,7 +81,7 @@
             />
           </RelativeLayout>
         </FlexLayout>
-        <FlexLayout FlexLayout.Grow="1" BackgroundColor="Gray" />
+        <FlexLayout FlexLayout.Grow="1" />
         <RelativeLayout>
           <Image Source="BottomNav.png" x:Name="agreementBottomNav" />
           <Label

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.IO;
 using Xamarin.Forms;
+using SignaturePad.Forms;
 
 namespace ClaimIt
 {
@@ -12,17 +13,19 @@ namespace ClaimIt
       InitializeComponent();
 
       var tapDisagree = new TapGestureRecognizer();
-      tapDisagree.Tapped += async delegate (object sender, EventArgs e) { await tapClear_TappedAsync(sender, e); };
+      tapDisagree.Tapped += TapClear_Tapped;
       clearBtn.GestureRecognizers.Add(tapDisagree);
 
       var tapAgree = new TapGestureRecognizer();
       tapAgree.Tapped += async delegate (object sender, EventArgs e) { await tapDone_TappedAsync(sender, e); };
       doneBtn.GestureRecognizers.Add(tapAgree);
+      closeImageBtn.GestureRecognizers.Add(tapAgree);
     }
 
-    async System.Threading.Tasks.Task tapClear_TappedAsync(object sender, EventArgs e)
+    private void TapClear_Tapped(object sender, EventArgs e)
     {
-      await Application.Current.MainPage.DisplayAlert("Test", "Clear", "Ok");
+      //Stream image = await PadView.GetImageStreamAsync(SignatureImageFormat.Jpeg); // save
+      PadView.Clear();
     }
 
     async System.Threading.Tasks.Task tapDone_TappedAsync(object sender, EventArgs e)
