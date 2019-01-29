@@ -9,7 +9,7 @@ namespace ClaimIt.DayViewComponent
   {
     public CarouselSampleViewModel()
     {
-      Items = new ObservableCollection<object>(Enumerable.Range(1, 20).Select(i => new {
+      Items = new ObservableCollection<object>(Enumerable.Range(1, 50).Select(i => new {
       Number = i,
       Page = GetPage(i).ToString(),
       Day1 = GetDay(i, 1).ToString(),
@@ -41,9 +41,9 @@ namespace ClaimIt.DayViewComponent
     private int GetPage(int i)
     {
       int page = 0;
-      if (i > 10)
+      if (i > 25)
       {
-        page = i - 20 - 1;
+        page = i - 50 - 1;
       }
       else
       {

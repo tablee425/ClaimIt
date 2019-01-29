@@ -1,14 +1,15 @@
 ﻿using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Util;
 
 namespace ClaimIt.Droid
 {
-  [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
-  public class SplashActivity : AppCompatActivity
+  [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+  public class SplashActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
   {
     static readonly string TAG = "X:" + typeof(SplashActivity).Name;
 

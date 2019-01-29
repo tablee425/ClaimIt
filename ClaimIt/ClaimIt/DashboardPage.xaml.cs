@@ -60,12 +60,7 @@ namespace ClaimIt
       carousel.SetBinding(CardsView.ItemsSourceProperty, nameof(CarouselSampleViewModel.Items));
       carousel.BindingContext = new CarouselSampleViewModel();
 
-      var parentScrollView = new DayViewComponent.ParentScrollView {
-        Content = new StackLayout {
-          Children = { carousel }
-        }
-      };
-      dynamicDayViewCarousel.Children.Add(parentScrollView);
+      dynamicDayViewCarousel.Children.Add(carousel);
     }
 
     protected override async void OnAppearing()

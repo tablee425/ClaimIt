@@ -51,10 +51,10 @@
                   <Label Text="PENDING TASKS" VerticalTextAlignment="Center" TextColor="Green" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                  <Frame Padding="0" BackgroundColor="Gray" WidthRequest="30" HeightRequest="30" CornerRadius="15" VerticalOptions="Center" HorizontalOptions="Center">
+                  <Frame Padding="0" BackgroundColor="#ddd" WidthRequest="30" HeightRequest="30" CornerRadius="15" VerticalOptions="Center" HorizontalOptions="Center">
                     <Label Text="1" VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Green" />
                   </Frame>
-                  <Image Source="LockIcon.png" HeightRequest="30" Aspect="AspectFit" />
+                  <Image Source="RightArrow.png" HeightRequest="30" Aspect="AspectFit" />
                 </StackLayout>
               </FlexLayout>
               <FlexLayout JustifyContent="Start" AlignItems="Center" HeightRequest="30">
