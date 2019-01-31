@@ -10,6 +10,7 @@
         <Setter Property="Margin" Value="2, 0, 2, 0" />
         <Setter Property="TextColor" Value="Green" />
         <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="WidthRequest" Value="25" />
       </Style>
     </ResourceDictionary>
   </ContentView.Resources>

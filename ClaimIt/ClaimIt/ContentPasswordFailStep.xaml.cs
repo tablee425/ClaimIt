@@ -15,7 +15,7 @@ namespace ClaimIt
       var tapImage = new TapGestureRecognizer();
       tapImage.Tapped += tapImage_Tapped;
       tryAgainImageBtn.GestureRecognizers.Add(tapImage);
-    }
+    } 
 
     void tapImage_Tapped(object sender, EventArgs e)
     {
